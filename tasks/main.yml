@@ -1,4 +1,7 @@
 ---
+- name: add PGDG key
+  shell: wget -O - --quiet http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+
 - name: install pgbouncer
   apt: name=pgbouncer state=latest
 
